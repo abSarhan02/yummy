@@ -1,0 +1,136 @@
+/* RESET START */
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth ;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+}
+/* RESET END */
+
+/* ROOT START */
+:root {
+  --dark-100: #222831;
+  --dark-200: #31363F;
+  --yellow: rgba(235, 247, 8, 0.563);
+  --violet-400: #c4bbf0;
+}
+
+/* GENERAL START */
+img{
+  width: 100%;
+}
+/* GENERAL END */
+
+/* BODY START */
+body {
+  background-color: var(--dark-100);
+}
+/* BODY END */
+
+/* NAV START */
+nav {
+  box-shadow: 1px 5px 15px rgba(8, 8, 8, 0.556);
+  z-index: 10; 
+  color: white;
+}
+.nav-top{
+transition: 0.35s;  }
+.nav-top:hover{
+scale: 1.1;
+}
+nav i {
+  color: white;
+  margin: 0.3rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+nav i:hover{
+  color: var(--yellow);
+
+}
+#visible-nav {
+  box-shadow: 1px 1px 10px var(--yellow);
+}
+#hidden-nav {
+  background-color: var(--dark-200);
+}
+#hidden-nav ul {
+  border: 7px double var(--yellow); 
+}
+#hidden-nav li {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem; 
+  transition: 0.3s;
+}
+#hidden-nav li:hover {
+  color: var(--yellow);
+}
+nav img {
+  width: 50px;
+  cursor: pointer;
+  filter: drop-shadow(1px 2px 10px rgba(8, 8, 8, 0.993));
+}
+/* NAV END */
+
+/* CARD START */
+.card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: 0.35s;
+}
+.card .card-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  right: 100%;
+  background-color: #f9f6f6ba;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: var(--dark-100);
+  align-items: center;
+  transition: 0.5s;
+  justify-content: center;
+  align-items: start;
+}
+.card:hover .card-layer {
+  top: 0;
+  right: 0;
+}
+.card:hover {
+  scale: 1.05;
+  box-shadow: 1px 5px 10px var(--yellow);
+}
+/* CARD END */
+
+/* MEAL DETAILS MODAL */
+.modal-content {
+  background-color: var(--dark-100);
+  color: white;
+}
+.meal-img-container {
+  flex: 1;
+}
+.meal-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+}
+.modal-body {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.meal-details h4 {
+  margin-top: 1rem;
+}
+/* MEAL DETAILS MODAL */
